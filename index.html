@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Game Title -->
+  <h1>Snake Game</h1>
+
+  <!-- Start Game Modal -->
+  <div id="startModal" class="modal">
+    <div class="modal-content">
+      <h2>Welcome to Snake Game.</h2>
+      <h2>Give Your Good Name </h2>
+      <input type="text" id="playerNameInput" placeholder=" Your Name" />
+      <h2>Let's Start</h2>
+      <button id="startGameButton">Start Game</button>
+    </div>
+  </div>
+
+  <!-- Game Container -->
+  <div id="game-container" style="display: none;">
+    <div id="game-board">
+      <canvas id="gameCanvas" width="400" height="400"></canvas>
+      <div id="score-container">Score: <span id="score">0</span></div>
+      <button id="restartButton">Restart</button>
+    </div>
+    <div id="leaderboard">
+      <h2>Leaderboard</h2>
+      <table id="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboard-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
